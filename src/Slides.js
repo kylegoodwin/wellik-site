@@ -18,13 +18,13 @@ const one =  (
   </div>)
 
 const two = (
-    <video autoPlay muted loop className="slide-two" src="/new.mp4">
+    <video autoPlay muted loop className="slide-two" src="https://kylegoodwin.github.io/wellik-site/new.mp4">
     </video>
 )
 
 const three = (
     <div className="slide-three">
-    <video autoPlay muted loop src="/two.mp4">
+    <video autoPlay muted loop src="https://kylegoodwin.github.io/wellik-site/two.mp4">
     </video>
     </div>
 
