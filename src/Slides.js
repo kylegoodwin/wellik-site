@@ -56,9 +56,9 @@ const two = (
 
 const three = (
     <div className="slide-three">
-    <span className="left-text">pare down to the essence</span>
+    {<div className="left-text"><p>pare down to the essence</p></div>}
     <LoadVideo url="/two2.mp4" />
-    <span className="bottom-text">pare down to the essence</span>
+    {<div className="bottom-text">pare down to the essence</div>}
     </div>
 
 )

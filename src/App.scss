@@ -219,10 +219,11 @@ body{
     width: 100vw;
   }
   
-  
 }
 
 .slide-three{
+
+  overflow: hidden;
 
   .video-wrap{
     width: 70%;
@@ -235,7 +236,6 @@ body{
   }
 
   .left-text{
-
     display: block;
     transform: rotate(-90deg);
     position: relative;
@@ -245,11 +245,12 @@ body{
   }
 
   .bottom-text{
-    display: table-cell;
+    position: fixed;
     font-size: 1.5vw;
     color: black;
-    background: red;
-    text-align: right;
+    bottom: 50%;
+    right: 20%;
+    transform: translate(0,23vw)
   }
 
   background-image: url("/br2.png");
@@ -263,7 +264,7 @@ body{
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  width: 120vw;
+  width: 100vw;
   height: 100vh;
 
   video{
