@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class LoadVideo extends React.Component{
   
   constructor(props){
@@ -20,21 +19,23 @@ class LoadVideo extends React.Component{
     return(
     <div className="video-wrap">
       {/*<span className="left-text">pare down to the essence</span>*/}
-      <video  onLoadedData={this.videoLoaded} id={"img-loaded" } autoPlay muted loop src={this.props.url}></video>
+      <video  onLoadedData={this.videoLoaded} id={this.state.loaded ? "img-loaded" : "" } autoPlay muted loop src={this.props.url}></video>
       {/*<span className="bottom-text">but don’t remove the poetry</span>*/}
     </div>)
   }
-
-
 }
-
 
 const one =  (
   <div>
     <div className="main-image">
-    <LoadVideo url="/home.mp4"></LoadVideo>
+    <div className="one-wrap">
+    <div className="main-logo">
       <h1>bethany wellik</h1>
       <h2>productivity + organization</h2>
+      </div>
+    <LoadVideo url="/home.mp4"></LoadVideo>
+   
+      </div>
         </div>
         <div className="bottom-bar">
       <div>
@@ -47,38 +48,75 @@ const one =  (
           </div>
   )
 
-const two = (
+const three = (
     <div className="slide-two">
-      <LoadVideo url="/new.mp4" />
+      <div className="left-text">
+        <p>simplicity</p> 
+        <p>is the ultimate</p>
+        <p>sophistication</p> 
+      </div>
+      <LoadVideo url="/six.mp4" />
     </div>
     
 )
 
-const three = (
+const two = (
     <div className="slide-three">
     {<div className="left-text"><p>pare down to the essence</p></div>}
     <LoadVideo url="/two2.mp4" />
-    {<div className="bottom-text">pare down to the essence</div>}
+    {<div className="bottom-text">but dont remove the poetry</div>}
     </div>
 
 )
 
-const four = (
-  <div className="slide-four">
-    <LoadVideo url="/three.mp4"></LoadVideo>
+const five = (
+  <div className="slide-three">
+  {<div className="left-text"><p>pare down to the essence</p></div>}
+  <LoadVideo url="/five.mp4" />
+  {<div className="bottom-text">but dont remove the poetry</div>}
   </div>
 )
 
-const five = (
+const six = (
+  <div className="slide-three alt-background">
+  {<div className="top-text">an interior is a natural projection of the soul</div>}
   <LoadVideo url="/four.mp4"></LoadVideo>
+  </div>
+)
+
+
+const quoteOne = (
+<div className="slide-two quote-one">
+      <div className="left-text">
+        <p>"Bethany is a life saver. She is my go-to woman for all of my organizational needs.   Her keen eye for aesthetics has added exquisite order to everything. She is a delight to work with; professional, savvy and hard working. I could not recommend her more highly”</p>
+        <br />
+        <p>Sara Meltzer</p>
+      </div>
+      <LoadVideo url="/six.mp4" />
+    </div>
+
+)
+
+const quoteTwo = (
+  <div className="test">
+      <LoadVideo url="/two2.mp4" />
+  <div className="left-text">
+  <p>
+  Bethany is a dream, from helping me plan every inch of my kitchen and closets to organizing a thoughtful and beautiful playroom she has transformed our space and made living in them a joy. 
+</p>
+<p>Sara Meltzer</p>
+  </div>
+  </div>
 )
 
 const slides = [
     one,
-    three,
     two,
-    four,
-    five
+    quoteTwo,
+    three,
+    quoteOne,
+    five,
+    six
 ]
 
 

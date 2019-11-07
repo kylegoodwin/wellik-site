@@ -2,6 +2,9 @@ a{
   color: white;
   text-decoration: none;
 }
+video{
+  visibility: hidden;
+}
 
 body{
   padding: 0;
@@ -17,57 +20,65 @@ body{
   right: 0;
 }
 
-#next{
-    cursor: url('/right.svg');
+#next:hover{
+  cursor: url('/right.svg'), auto;
 }
 
 #back{
-  cursor: url('/left.svg');
+  cursor: url('/left.svg'), auto;
   left: 0;
 }
 
 
 .main-image{
-  // margin: auto;
-  // margin-top: 5em;
-  // height: 80vh;
-  // width: 80%;
-  // background-image: url("/img_one.png");
-  // background-size: cover;
-  // background-position-x: right;
-  width: 85%;
-  margin: auto;
-  margin-top: 5em;
-  padding-bottom: 0;
-    
-    h1{
-    font-size: 6.3vw;
-    position: absolute;
-    top: 2em;
-    left: 1.5em;
-    font-family: rhode-extended, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-    h2{
+
+  width: 100%;
+  height: 100vh;
+
+  .one-wrap{
+    width: 85%;
+    position: relative;
+    margin: auto;
+    margin-top: 10em;
+  
+    .main-logo{
       position: absolute;
-      font-size: 1.5vw;
-      font-family: aktiv-grotesk-extended, sans-serif;
-      font-weight: 400;
-      right: 16%;
-      top: 35%;
-  
-  
+      top: 30vh;
+      //transform: translateY(-50%);
+      width: 100%;
     }
 
     video{
-      margin-top: -3em;
       width: 100%;
-      height: 110vh;
       z-index: -2;
+      position: absolute;
+      left: 0;
     }
+
+
+    h1{
+    
+    text-align: center;
+    font-size: 6.3vw;
+    top: 30%;
+    font-family: rhode-extended, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding-bottom: 0;
+    
+  }
+
+  h2{
+    text-align: right;
+    font-size: 1.5vw;
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 400;
+    margin-right: 10%;
+    margin-top: 0;
+  }
+
+  }
 
 }
 
@@ -110,7 +121,7 @@ body{
 
 .bottom-bar{
   font-size: .75em;
-  margin-top: 2em;
+  //margin-top: 2em;
   color: #F2E1CC;
 }
 
@@ -133,18 +144,18 @@ body{
     transform: translate(-50%, 0);
   }
 
-  .about, .contact{
+  #about, #contact{
     position: fixed;
-    top: 2em;
+    top: 4em;
     z-index: 2;
   }
 
-  .about{
-    left: 2em;
+  #about{
+    left: 5em;
   }
 
-  .contact{
-    right: 2em;
+  #contact{
+    right: 5em;
   }
 
 }
@@ -215,24 +226,41 @@ body{
 
 .slide-two{
 
+
+  height: 100vh;
+  overflow: hidden;
+
   video{
-    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .left-text{
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: left;
+    position: absolute;
+    left: 15%;
+    bottom: 35%;
+    z-index: 1;
   }
   
 }
 
+.left-text,.bottom-text,.top-text{
+  font-size: 1.5vw;
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 400;
+}
+
 .slide-three{
+
 
   overflow: hidden;
 
   .video-wrap{
     width: 70%;
-  }
-
-  .left-text,.bottom-text{
-    font-size: 1.5vw;
-    font-family: aktiv-grotesk-extended, sans-serif;
-    font-weight: 400;
   }
 
   .left-text{
@@ -268,6 +296,7 @@ body{
   height: 100vh;
 
   video{
+   // filter: invert(100%) grayscale(100%);
     width: 70%;
     display: table-cell;
     position: absolute;
@@ -295,11 +324,26 @@ body{
   }
 }
 
+.alt-background{
+  background-image: url("/br3.png");
+
+  .top-text{
+    color: black;
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: -30%;
+    z-index: 10;
+  }
+}
+
 #img-loaded{
+  visibility: visible;
   animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
   opacity: 0;
   animation-fill-mode: forwards;
   animation-duration: 6s;
+  animation-delay: .1s;
   translate:  (-20px);
 }
 
@@ -310,4 +354,51 @@ body{
    }
   to{opacity: 1; padding-left: 0px;}
  }
+
+
+// NEW ADDITIONS
+
+.inverted{
+  video{
+    filter: invert(100%);
+  }
+}
+
+.test{
+  margin-top: 10%;
+  display: table;
+  height: 100%;
+  display: flex;
+
+  .left-text{
+    width: 30%;
+    height: 100%;
+    text-align: left;
+    margin: 2em;
+  }
+
+  .video-wrap{
+    display: table;
+    width: 40%;
+    margin-left: 10%;
+  }
+
+
+  video {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    display: table-cell;
+
+}
+}
+
+.quote-one{
+  filter: invert(110%);
+
+  .left-text{
+    width: 50%;
+    margin-left: -5em;
+  }
+}
 

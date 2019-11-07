@@ -48,9 +48,9 @@ class App extends React.Component {
 
       <Router>
         <div className="top-bar">
-          <div className="about"><Link to="/about">about</Link></div>
+          <div id="about"><Link to="/about">about</Link></div>
           {!this.state.logoVisible ? "" : <h1><Link onClick={this.handleReset} to={{pathname:"/"}}>bethany wellik</Link></h1>}
-          <div className="contact"><Link to="/contact">contact</Link></div>
+          <div id="contact"><Link to="/contact">contact</Link></div>
       </div>
         <Switch>
           <Route path="/about">
