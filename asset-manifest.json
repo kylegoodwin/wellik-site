@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wellik-site/static/css/main.815d1261.chunk.css",
-    "main.js": "/wellik-site/static/js/main.aa6b3e2c.chunk.js",
-    "main.js.map": "/wellik-site/static/js/main.aa6b3e2c.chunk.js.map",
+    "main.css": "/wellik-site/static/css/main.2f34a4b8.chunk.css",
+    "main.js": "/wellik-site/static/js/main.c77c6dbe.chunk.js",
+    "main.js.map": "/wellik-site/static/js/main.c77c6dbe.chunk.js.map",
     "runtime-main.js": "/wellik-site/static/js/runtime-main.fa419024.js",
     "runtime-main.js.map": "/wellik-site/static/js/runtime-main.fa419024.js.map",
-    "static/js/2.faae1918.chunk.js": "/wellik-site/static/js/2.faae1918.chunk.js",
-    "static/js/2.faae1918.chunk.js.map": "/wellik-site/static/js/2.faae1918.chunk.js.map",
+    "static/js/2.14bf9ea9.chunk.js": "/wellik-site/static/js/2.14bf9ea9.chunk.js",
+    "static/js/2.14bf9ea9.chunk.js.map": "/wellik-site/static/js/2.14bf9ea9.chunk.js.map",
     "index.html": "/wellik-site/index.html",
-    "precache-manifest.346e1faf0526432a367fc2068399bb6f.js": "/wellik-site/precache-manifest.346e1faf0526432a367fc2068399bb6f.js",
+    "precache-manifest.27047836fca1f509751ab95bdbb186b2.js": "/wellik-site/precache-manifest.27047836fca1f509751ab95bdbb186b2.js",
     "service-worker.js": "/wellik-site/service-worker.js",
-    "static/css/main.815d1261.chunk.css.map": "/wellik-site/static/css/main.815d1261.chunk.css.map"
+    "static/css/main.2f34a4b8.chunk.css.map": "/wellik-site/static/css/main.2f34a4b8.chunk.css.map"
   }
 }
