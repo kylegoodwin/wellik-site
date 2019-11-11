@@ -4,7 +4,7 @@ import {About} from './About'
 import {Contact} from './Contact'
 import './Main'
 
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link, NavLink} from "react-router-dom";
 import Main from './Main';
 
 class App extends React.Component {
@@ -48,9 +48,9 @@ class App extends React.Component {
 
       <Router>
         <div className="top-bar">
-          <div id="about"><Link to="/about">about</Link></div>
+          <div id="about"><NavLink activeClassName='active-link' to="/about">about</NavLink></div>
           {!this.state.logoVisible ? "" : <h1><Link onClick={this.handleReset} to={{pathname:"/"}}>bethany wellik</Link></h1>}
-          <div id="contact"><Link to="/contact">contact</Link></div>
+          <div id="contact"><NavLink activeClassName='active-link' to="/contact">contact</NavLink></div>
       </div>
         <Switch>
           <Route path="/about">

@@ -15,9 +15,11 @@ class LoadVideo extends React.Component{
     })
   }
 
+  /*
   componentDidMount() {
     console.log("MOUNT")
   }
+  */
 
   render(){
     return(
@@ -44,7 +46,7 @@ const one =  (
         <div className="bottom-bar">
       <div>
         <p>
-          789 Sik Block <br></br>
+        387 Grand Street <br></br>
           New York, NY 10003
         </p>
       </div>
