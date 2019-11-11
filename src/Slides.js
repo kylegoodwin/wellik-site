@@ -15,11 +15,15 @@ class LoadVideo extends React.Component{
     })
   }
 
+  componentDidMount() {
+    console.log("MOUNT")
+  }
+
   render(){
     return(
     <div className="video-wrap">
       {/*<span className="left-text">pare down to the essence</span>*/}
-      <video  onLoadedData={this.videoLoaded} id={this.state.loaded ? "img-loaded" : "" } autoPlay muted loop src={this.props.url}></video>
+      <video  onLoadedData={this.videoLoaded} id={"img-loaded"} autoPlay muted loop src={this.props.url}></video>
       {/*<span className="bottom-text">but don’t remove the poetry</span>*/}
     </div>)
   }
@@ -98,25 +102,55 @@ const quoteOne = (
 )
 
 const quoteTwo = (
-  <div className="test">
-      <LoadVideo url="/two2.mp4" />
+  <div className="quote inverted">
   <div className="left-text">
   <p>
   Bethany is a dream, from helping me plan every inch of my kitchen and closets to organizing a thoughtful and beautiful playroom she has transformed our space and made living in them a joy. 
+  </p>
+  <p>Parisa Ramji</p>
+  </div>
+  <LoadVideo url="/two2.mp4" />
+  </div>
+)
+
+const quoteThree = (
+  <div className="quote">
+<div className="left-text">
+<p>
+As an architect living in a micro-apartment everything, I need in my home needs to be in its place to create serenity, and Bethany was instrumental in making that happen.
 </p>
-<p>Sara Meltzer</p>
-  </div>
-  </div>
+<p>Suchi Reddy</p>
+</div>
+<LoadVideo url="/two2.mp4" />
+</div>
+  
+)
+
+
+const quoteFour = (
+  <div className="quote">
+  <LoadVideo url="/two2.mp4" />
+<div className="right-text">
+<p>
+Bethany's artistic vision for my wardrobe and closet organization, plus artwork display in my home, has been life altering. 
+My home is more pleasing to the eye thanks to Bethany's creative ideas and I'm excited for others to experience the many benefits of Bethany's insight. 
+</p>
+<p>Lisa Reising</p>
+</div>
+</div>
+  
 )
 
 const slides = [
     one,
+    quoteOne,
     two,
     quoteTwo,
     three,
-    quoteOne,
+    quoteThree,
     five,
-    six
+    quoteFour,
+    six,
 ]
 
 

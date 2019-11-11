@@ -39,7 +39,7 @@ body{
     width: 85%;
     position: relative;
     margin: auto;
-    margin-top: 10em;
+    margin-top: 6em;
   
     .main-logo{
       position: absolute;
@@ -248,7 +248,7 @@ body{
   
 }
 
-.left-text,.bottom-text,.top-text{
+.left-text,.bottom-text,.top-text,.right-text{
   font-size: 1.5vw;
   font-family: aktiv-grotesk-extended, sans-serif;
   font-weight: 400;
@@ -326,6 +326,7 @@ body{
 
 .alt-background{
   background-image: url("/br3.png");
+  
 
   .top-text{
     color: black;
@@ -336,6 +337,7 @@ body{
     z-index: 10;
   }
 }
+
 
 #img-loaded{
   visibility: visible;
@@ -349,10 +351,18 @@ body{
 
 @keyframes fadeInImg{
   from{
-    opacity: 0; padding-left: 500px;
+    opacity: 0; margin-left: 500px;
  
    }
-  to{opacity: 1; padding-left: 0px;}
+  to{opacity: 1; margin-left: 0px;}
+ }
+
+ @keyframes fadeInText{
+  from{
+    opacity: 0;
+ 
+   }
+  to{opacity: 1;}
  }
 
 
@@ -364,17 +374,23 @@ body{
   }
 }
 
-.test{
+.quote{
   margin-top: 10%;
   display: table;
   height: 100%;
   display: flex;
 
-  .left-text{
+  .right-text{
     width: 30%;
     height: 100%;
     text-align: left;
     margin: 2em;
+
+    animation: fadeInText cubic-bezier(0.23, 1, 0.32, 1) 1;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 6s;
+    animation-delay: 1.5s;
   }
 
   .video-wrap{
@@ -391,6 +407,16 @@ body{
     display: table-cell;
 
 }
+
+  .left-text{
+    width: 30%;
+    height: 100%;
+    text-align: left;
+    margin: 2em;
+    margin-left: 6em;
+
+
+  }
 }
 
 .quote-one{
