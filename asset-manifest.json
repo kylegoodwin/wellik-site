@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wellik-site/static/css/main.2f34a4b8.chunk.css",
+    "main.css": "/wellik-site/static/css/main.e5461179.chunk.css",
     "main.js": "/wellik-site/static/js/main.c77c6dbe.chunk.js",
     "main.js.map": "/wellik-site/static/js/main.c77c6dbe.chunk.js.map",
     "runtime-main.js": "/wellik-site/static/js/runtime-main.fa419024.js",
@@ -8,8 +8,8 @@
     "static/js/2.14bf9ea9.chunk.js": "/wellik-site/static/js/2.14bf9ea9.chunk.js",
     "static/js/2.14bf9ea9.chunk.js.map": "/wellik-site/static/js/2.14bf9ea9.chunk.js.map",
     "index.html": "/wellik-site/index.html",
-    "precache-manifest.27047836fca1f509751ab95bdbb186b2.js": "/wellik-site/precache-manifest.27047836fca1f509751ab95bdbb186b2.js",
+    "precache-manifest.fc675d9ed0ea130e06862fc43bddb997.js": "/wellik-site/precache-manifest.fc675d9ed0ea130e06862fc43bddb997.js",
     "service-worker.js": "/wellik-site/service-worker.js",
-    "static/css/main.2f34a4b8.chunk.css.map": "/wellik-site/static/css/main.2f34a4b8.chunk.css.map"
+    "static/css/main.e5461179.chunk.css.map": "/wellik-site/static/css/main.e5461179.chunk.css.map"
   }
 }
