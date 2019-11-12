@@ -1,4 +1,7 @@
 import React,{useEffect} from 'react';
+import {LoadVideo} from './Slides'
+
+const baseURL = "https://kylegoodwin.github.io/wellik-site"
 
 const Contact = (props) => {
 
@@ -6,8 +9,9 @@ const Contact = (props) => {
         props.test();
       }, [])
 
-return(<div>
-        contact in progress
+return(<div className="contact-page">
+        <p> hi@bethanywellik.com</p>
+        <img src={`${baseURL}/contact.JPG`} />
     </div>)
 }
 export {Contact};

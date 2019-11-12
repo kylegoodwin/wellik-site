@@ -1,6 +1,9 @@
 import React from 'react';
 
-class LoadVideo extends React.Component{
+const baseURL = "https://kylegoodwin.github.io/wellik-site"
+
+
+export class LoadVideo extends React.Component{
   
   constructor(props){
     super(props)
@@ -24,9 +27,9 @@ class LoadVideo extends React.Component{
   render(){
     return(
     <div className="video-wrap">
-      {/*<span className="left-text">pare down to the essence</span>*/}
-      <video  onLoadedData={this.videoLoaded} id={"img-loaded"} autoPlay muted loop src={this.props.url}></video>
-      {/*<span className="bottom-text">but don’t remove the poetry</span>*/}
+      <video  onLoadedData={this.videoLoaded} id={this.state.loaded ? "img-loaded" : ""} playsInline autoPlay muted loop src={this.props.url}></video>
+      {this.props.internalText ? <span className="internal-text">{this.props.internalText}</span> : ""}
+      {this.props.internalTextTwo ? <span className="internal-text-two">{this.props.internalTextTwo}</span> : ""}
     </div>)
   }
 }
@@ -39,16 +42,8 @@ const one =  (
       <h1>bethany wellik</h1>
       <h2>productivity + organization</h2>
       </div>
-    <LoadVideo url="/home.mp4"></LoadVideo>
+    <LoadVideo url={`${baseURL}/main.mp4`}></LoadVideo>
    
-      </div>
-        </div>
-        <div className="bottom-bar">
-      <div>
-        <p>
-        387 Grand Street <br></br>
-          New York, NY 10003
-        </p>
       </div>
         </div>
           </div>
@@ -61,7 +56,7 @@ const three = (
         <p>is the ultimate</p>
         <p>sophistication</p> 
       </div>
-      <LoadVideo url="/six.mp4" />
+      <LoadVideo url={`${baseURL}/six.mp4`} />
     </div>
     
 )
@@ -69,36 +64,34 @@ const three = (
 const two = (
     <div className="slide-three">
     {<div className="left-text"><p>pare down to the essence</p></div>}
-    <LoadVideo url="/two2.mp4" />
+    <LoadVideo url={`${baseURL}/two2.mp4`} />
     {<div className="bottom-text">but dont remove the poetry</div>}
     </div>
 
 )
 
 const five = (
-  <div className="slide-three">
-  {<div className="left-text"><p>pare down to the essence</p></div>}
-  <LoadVideo url="/five.mp4" />
-  {<div className="bottom-text">but dont remove the poetry</div>}
+  <div className="slide-three five">
+  <LoadVideo internalTextTwo="of function and form" internalText="beauty is the harmony" url={`${baseURL}/five.mp4`} />
   </div>
 )
 
 const six = (
   <div className="slide-three alt-background">
   {<div className="top-text">an interior is a natural projection of the soul</div>}
-  <LoadVideo url="/four.mp4"></LoadVideo>
+  <LoadVideo url={`${baseURL}/four.mp4`}></LoadVideo>
   </div>
 )
 
 
 const quoteOne = (
-<div className="slide-two quote-one">
-      <div className="left-text">
+<div className="quote-one slide-two">
+      <div className="left-text" id="left-quote">
         <p>"Bethany is a life saver. She is my go-to woman for all of my organizational needs.   Her keen eye for aesthetics has added exquisite order to everything. She is a delight to work with; professional, savvy and hard working. I could not recommend her more highly”</p>
         <br />
         <p>Sara Meltzer</p>
       </div>
-      <LoadVideo url="/six.mp4" />
+      <LoadVideo url={`${baseURL}/home.mp4`} />
     </div>
 
 )
@@ -107,11 +100,11 @@ const quoteTwo = (
   <div className="quote inverted">
   <div className="left-text">
   <p>
-  Bethany is a dream, from helping me plan every inch of my kitchen and closets to organizing a thoughtful and beautiful playroom she has transformed our space and made living in them a joy. 
+  "Bethany is a dream, from helping me plan every inch of my kitchen and closets to organizing a thoughtful and beautiful playroom she has transformed our space and made living in them a joy."
   </p>
   <p>Parisa Ramji</p>
   </div>
-  <LoadVideo url="/two2.mp4" />
+  <LoadVideo url={`${baseURL}/two2.mp4`} />
   </div>
 )
 
@@ -119,11 +112,11 @@ const quoteThree = (
   <div className="quote">
 <div className="left-text">
 <p>
-As an architect living in a micro-apartment everything, I need in my home needs to be in its place to create serenity, and Bethany was instrumental in making that happen.
+"As an architect living in a micro-apartment everything, I need in my home needs to be in its place to create serenity, and Bethany was instrumental in making that happen."
 </p>
 <p>Suchi Reddy</p>
 </div>
-<LoadVideo url="/two2.mp4" />
+<LoadVideo url={`${baseURL}/two2.mp4`} />
 </div>
   
 )
@@ -131,11 +124,11 @@ As an architect living in a micro-apartment everything, I need in my home needs 
 
 const quoteFour = (
   <div className="quote">
-  <LoadVideo url="/two2.mp4" />
+  <LoadVideo url={`${baseURL}/two2.mp4`} />
 <div className="right-text">
 <p>
-Bethany's artistic vision for my wardrobe and closet organization, plus artwork display in my home, has been life altering. 
-My home is more pleasing to the eye thanks to Bethany's creative ideas and I'm excited for others to experience the many benefits of Bethany's insight. 
+"Bethany's artistic vision for my wardrobe and closet organization, plus artwork display in my home, has been life altering. 
+My home is more pleasing to the eye thanks to Bethany's creative ideas and I'm excited for others to experience the many benefits of Bethany's insight." 
 </p>
 <p>Lisa Reising</p>
 </div>

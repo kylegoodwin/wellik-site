@@ -1,4 +1,6 @@
 import React from 'react'
+import Icon from '@mdi/react'
+import { mdiInstagram,mdiLinkedin } from '@mdi/js'
 
 import slides from './Slides';
 export default class Main extends React.Component{
@@ -54,6 +56,31 @@ export default class Main extends React.Component{
         <div id="back" onClick={this.handleBack} ></div>
 
         {slides[this.props.slideNumber]}
+
+        <div className="bottom-bar">
+      <div>
+      
+      <p>
+        387 Grand Street <br></br>
+          New York, NY 10003
+        </p>
+
+        <a href="https://www.linkedin.com/in/bethany-wellik-a0372b59">
+        <Icon path={mdiInstagram}
+        title="User Profile"
+        size={1}
+        color="#f0e1cf"/>
+        </a>
+
+        <a href="https://www.linkedin.com/in/bethany-wellik-a0372b59">
+         <Icon path={mdiLinkedin}
+        title="User Profile"
+        size={1}
+        color="#f0e1cf"/>
+        </a>
+
+      </div>
+        </div>
 
       </div>
         )
