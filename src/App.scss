@@ -1,4 +1,5 @@
-$assetPath: "https://kylegoodwin.github.io/wellik-site";
+//$assetPath: "https://kylegoodwin.github.io/wellik-site";
+$assetPath: "";
 
 a{
   color: white;
@@ -19,7 +20,7 @@ body{
 #next,#back{
   height: 80vh;
   width: 50%;
-  z-index: 1;
+  z-index: 2;
   display: block;
   position: fixed;
   right: 0;
@@ -48,7 +49,7 @@ body{
   
     .main-logo{
       position: absolute;
-      top: 30vh;
+      top: 35vh;
       width: 100%;
     }
 
@@ -61,7 +62,6 @@ body{
 
 
     h1{
-    
     text-align: center;
     font-size: 6.3vw;
     top: 30%;
@@ -120,25 +120,6 @@ body{
   
 }
 
-.about-bottom{
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  bottom: 0;
-  left: 0;
-  display: table;
-  //background-color: black;
-
-  div{
-    display: table-cell;
-    vertical-align: middle;
-    padding: 1em;
-    text-align: center;
-
-  }
-
-}
-
 .bottom-bar{
   font-size: .75em;
   //margin-top: 2em;
@@ -151,6 +132,10 @@ body{
   top: 0;
   left: 0;
   z-index: 10;
+
+  a{
+    padding: 100px;
+  }
   
   a:hover{
     text-decoration: underline;
@@ -190,65 +175,94 @@ body{
 
 .about{
 
-    margin-top: 6em;
+  /*
+  .left-container{
+    background-color: red;;
+  }
+
+  .right-container{
+    background-color: blue;
+
+  }
+  */
+
+    margin-top: 4em;
     text-align: left;
+    height: 100vh;
 
     .left-container,.right-container{
       width: 50%;
-      height: 70vh;
+      height: 60vh;
       float: left;
       padding-top: 4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4em;
     }
 
+    .right-container img,.text{
+      width: 30vw;
+      height: 30vw;
+      object-fit: cover;
+      display: block;
+      //border: solid 3px blueviolet;
+    }
 
     .left-container{
 
       .text{
-        font-size: 2em;
+        font-size: 1.25vw;
         font-family: aktiv-grotesk-extended, sans-serif;
         font-weight: 400;
-        font-size: 1em;
 
-        display: block;
-        margin: auto;
-        padding: 2em;
-        padding-top: 1em;
-        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        p{
+          padding: 0;
+          margin: 0;
+        }
       }
 
-      img{
-        padding-top: 2em;
-        width: 200px;
-      }
-    }
-
-    .right-container{
-      text-align: center;
-
-      img{
-        height: 80%;
-      }
     }
 
   .about-bottom{
-    padding: 0 0 2em 4em;
+    display: flex;
+    margin-bottom: 5em;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 1em;
+
+    img{
+      margin: 2em;
+      display: block;
+      width: 5%;
+      align-self: center;
+    }
+
+    p{
+      align-self: center;
+      width: 80%;
+      text-align: left;
+    }
+
+    
     font-size: .75em;
     font-family: rhode, sans-serif;
     font-weight: 400;
     font-style: normal;
     width: 100%;
-
-    p{
-     width: 90%; 
-    }
+    height: 10vh;
     
   }
   
 }
 
 .slide-two{
-
-
   height: 100vh;
   overflow: hidden;
 
@@ -257,15 +271,30 @@ body{
     overflow: hidden;
   }
 
-  .left-text{
-    font-family: aktiv-grotesk-extended, sans-serif;
-    font-weight: 400;
-    font-size: 1.5em;
-    text-align: left;
+  .left-text,.right-text{
+    //text-align: left;
     position: absolute;
-    left: 15%;
-    bottom: 35%;
+    top: 0;
     z-index: 1;
+    margin: 0;
+    padding:0;
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //align-items: center;
+  }
+
+  .right-text{
+    left: initial;
+    right: 4em;
+    text-align: right;
+  }
+
+  .left-text{
+    left: 4em;
+    text-align: left;
   }
   
 }
@@ -277,9 +306,7 @@ body{
 }
 
 .slide-three{
-
-
-  overflow: hidden;
+ overflow: hidden;
 
   .video-wrap{
     width: 70%;
@@ -347,17 +374,54 @@ body{
 }
 
 .alt-background{
-  background-image: url(#{$assetPath}/br3.png);
-  
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
-  .top-text{
-    color: black;
-    display: block;
+  background-image: url(#{$assetPath}/br3.png);
+  background-size: cover;
+
+  .video-wrap{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
     position: relative;
-    left: 0;
-    bottom: -30%;
-    z-index: 10;
+
+    .internal-text{
+      color: black;
+      position: absolute;
+      bottom: 2em;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
+
+
+  video{
+    display: block;
+    object-fit: cover;
+    align-self: center;
+    position: relative;
+    width: 80%;
+    
+  }
+
+  /*
+  .background-img{
+    top: 0;
+    right: 0;
+    position: fixed;
+    object-fit: cover;
+    //height: 100%;
+    width: 100%;
+    //filter: invert(100) grayscale(100);
+    z-index: -1;
+  }
+  */
 }
 
 
@@ -371,12 +435,64 @@ body{
   translate:  (-20px);
 }
 
+#img-top{
+  visibility: visible;
+  animation: fadeInImgTop cubic-bezier(0.23, 1, 0.32, 1) 1;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 6s;
+  animation-delay: .1s;
+  translate:  (-20px);
+}
+
+#img-alt{
+  visibility: visible;
+  animation: fadeInImgAlt cubic-bezier(0.23, 1, 0.32, 1) 1;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 6s;
+  animation-delay: .1s;
+}
+
+#img-fade{
+  visibility: visible;
+  animation: fadeInImgSimple cubic-bezier(0.23, 1, 0.32, 1) 1;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 6s;
+  animation-delay: .1s;
+}
+
 @keyframes fadeInImg{
   from{
     opacity: 0; margin-left: 500px;
  
    }
   to{opacity: 1; margin-left: 0px;}
+ }
+
+ @keyframes fadeInImgSimple{
+  from{
+    opacity: 0;
+ 
+   }
+  to{opacity: 1;}
+ }
+
+ @keyframes fadeInImgAlt{
+  from{
+    opacity: 0; margin-left: -500px;
+ 
+   }
+  to{opacity: 1; margin-left: 0px;}
+ }
+
+ @keyframes fadeInImgTop{
+  from{
+    opacity: 0; margin-top: -500px;
+ 
+   }
+  to{opacity: 1; margin-top: 0px;}
  }
 
  @keyframes fadeInText{
@@ -397,56 +513,76 @@ body{
 }
 
 .quote{
-  margin-top: 10%;
-  display: table;
+  margin-top: 5%;
   height: 100%;
   display: flex;
   height: 100vh;
 
-  .right-text{
-    width: 30%;
-    height: 100%;
+  .right-text,.left-text{
     text-align: left;
-    margin: 2em;
+
+    display: flex;
 
     animation: fadeInText linear;
     opacity: 0;
     animation-fill-mode: forwards;
     animation-duration: 3s;
+
+    //background-color: royalblue;
+
+    div{
+      //background-color: sandybrown;
+      margin: auto;
+      padding: 0;
+      width: 35vw;
+    }
   }
 
   .video-wrap{
-    display: table;
-    width: 40%;
-    margin-left: 10%;
+    
+    display: flex;
+    //background-color: red;
+    justify-content: center;
+    align-items: center;
   }
 
 
   video {
-    width: 500px;
-    height: 500px;
+    align-self: center;
+    width: 35vw;
+    height: 35vw;
     object-fit: cover;
-    display: table-cell;
-
-}
-
-  .left-text{
-    width: 30%;
-    height: 100%;
-    text-align: left;
-    margin: 2em;
-    margin-left: 6em;
-
   }
+
+  .left-text,.right-text,.video-wrap{
+    width: 50%;
+    height: 80vh;
+  }
+
 }
 
 .quote-one{
-  filter: invert(110%) grayscale(50%);;
+  filter: invert(110%) grayscale(100%);
   
-
   .left-text{
+
+    left: 8em;
+
+    color: black;
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
     width: 30%;
-   // margin-left: -5em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div{
+      align-self: center;
+      padding-top: 4em;
+    }
   }
 }
 
@@ -454,21 +590,38 @@ body{
 
 .contact-page{
 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 
-  margin-top: 15%;
+  div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 
-  img {
-    animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
-    opacity: 0;
-    animation-fill-mode: forwards;
-    animation-duration: 6s;
-    animation-delay: .1s;
+    a{
+      font-size: 1.25em;
+      display: block;
+      margin: 1em auto;
+    }
 
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
+    img {
+      animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-duration: 6s;
+      animation-delay: .1s;
 
-}
+      width: 30vw;
+      height: 30vw;
+      object-fit: cover;
+  }
+
+  }
+
 }
 
 
@@ -489,7 +642,7 @@ body{
 
   .internal-text{
     position: absolute;
-    left: 0em;
+    left: -2em;
     top: -2em;
     width: 600px;
     text-align: left;

@@ -10,8 +10,12 @@ const Contact = (props) => {
       }, [])
 
 return(<div className="contact-page">
-        <p> hi@bethanywellik.com</p>
-        <img src={`${baseURL}/contact.JPG`} />
+        <div>
+            <div>
+                <a href="mailto:bethany@bethanywellik.com"> hi@bethanywellik.com</a>
+                <img src={`${baseURL}/about.png`} />
+            </div>
+        </div>
     </div>)
 }
 export {Contact};

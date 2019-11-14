@@ -7,6 +7,34 @@ import './Main'
 import { HashRouter as Router, Switch, Route, Link, NavLink} from "react-router-dom";
 import Main from './Main';
 
+import Icon from '@mdi/react'
+import { mdiInstagram,mdiLinkedin } from '@mdi/js'
+
+const bottomBar = (<div className="bottom-bar">
+<div>
+
+<p>
+  387 Grand Street <br></br>
+    New York, NY 10003
+  </p>
+
+  <a href="https://www.linkedin.com/in/bethany-wellik-a0372b59">
+  <Icon path={mdiInstagram}
+  title="User Profile"
+  size={1}
+  color="#f0e1cf"/>
+  </a>
+
+  <a href="https://www.linkedin.com/in/bethany-wellik-a0372b59">
+   <Icon path={mdiLinkedin}
+  title="User Profile"
+  size={1}
+  color="#f0e1cf"/>
+  </a>
+
+</div>
+  </div>)
+
 class App extends React.Component {
 
   constructor(props) {
@@ -63,8 +91,9 @@ class App extends React.Component {
             <Main setSlideNumber={this.setSlideNumber} slideNumber={this.state.slideNumber} makeLogoInvisible={this.makeLogoInvisible} makeLogoVisible={this.makeLogoVisible}></Main>
           </Route>
         </Switch>
-
+        {bottomBar}
       </Router>
+      
     );
   }
 
