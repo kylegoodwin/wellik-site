@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wellik-site/precache-manifest.a75dfc35096ba5747f84e2f4313159d4.js"
+  "/wellik-site/precache-manifest.33d71b320bfc14f37157b90936496f39.js"
 );
 
 self.addEventListener('message', (event) => {

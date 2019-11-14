@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "697271f40fcc267de57a4409dde6c9cb",
+    "revision": "b5a812cd404268af5e93c36900748175",
     "url": "/wellik-site/index.html"
   },
   {
-    "revision": "efc3a78f5321bf36fa0c",
-    "url": "/wellik-site/static/css/main.69491a77.chunk.css"
+    "revision": "f3580f2c8fdc616f2009",
+    "url": "/wellik-site/static/css/main.2aa3c360.chunk.css"
   },
   {
     "revision": "eb2bdd82c1694bffccec",
     "url": "/wellik-site/static/js/2.e4b9a58f.chunk.js"
   },
   {
-    "revision": "efc3a78f5321bf36fa0c",
+    "revision": "f3580f2c8fdc616f2009",
     "url": "/wellik-site/static/js/main.11a6bde3.chunk.js"
   },
   {
