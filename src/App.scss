@@ -1,5 +1,5 @@
-//$assetPath: "https://kylegoodwin.github.io/wellik-site";
-$assetPath: "";
+$assetPath: "https://kylegoodwin.github.io/wellik-site";
+//$assetPath: "";
 
 a{
   color: white;
@@ -210,7 +210,7 @@ body{
     }
 
     .left-container{
-
+      //background-color: red;
       .text{
         font-size: 1.25vw;
         font-family: aktiv-grotesk-extended, sans-serif;
@@ -218,9 +218,10 @@ body{
 
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-
+        justify-content: space-between;
+        // background-color: blue;
         p{
+          
           padding: 0;
           margin: 0;
         }
